@@ -1,0 +1,44 @@
+# ── Secrets & credentials (NEVER commit these) ──────────────
+.env
+assets/credentials.json
+assets/token.json
+assets/drive_token.json
+assets/drive_token.pkl
+data/spotify_token.json
+
+# ── Personal / contact data ───────────────────────────────────
+data/contacts.json
+data/email_contacts.json
+
+# ── Large binary / model files ───────────────────────────────
+assets/piper_windows_amd64/
+assets/models/
+assets/temp/
+
+# ── User data (databases) ────────────────────────────────────
+data/*.db
+
+# ── Python runtime artifacts ─────────────────────────────────
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── IDE / OS noise ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Temp / generated ─────────────────────────────────────────
+*.wav
+*.log

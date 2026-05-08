@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your World · Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+<div class="world-layout">
+
+  <!-- ═══ TOP NAV ═══ -->
+  <header class="topbar">
+    <a href="/" class="topbar-logo">ATLAS</a>
+    <nav class="nav-tabs" id="nav-tabs">
+      <button class="nav-tab active" data-tab="email">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        Email
+      </button>
+      <button class="nav-tab" data-tab="tasks">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tasks
+      </button>
+      <button class="nav-tab" data-tab="meetings">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Meetings
+      </button>
+      <button class="nav-tab" data-tab="health">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Health
+      </button>
+      <button class="nav-tab" data-tab="notes">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Notes
+      </button>
+      <button class="nav-tab" data-tab="habits">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Habits
+      </button>
+      <button class="nav-tab" data-tab="calendar">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><rect x="8" y="14" width="3" height="3" rx="1" fill="currentColor"/></svg>
+        Calendar
+      </button>
+      <button class="nav-tab" data-tab="journal">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Journal
+      </button>
+      <button class="nav-tab" data-tab="finance">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Finance
+      </button>
+      <button class="nav-tab" data-tab="sysmon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        System
+      </button>
+      <button class="nav-tab" data-tab="whiteboard">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Whiteboard
+      </button>
+    </nav>
+    <span class="topbar-spacer"></span>
+    <span class="topbar-right" id="world-clock"></span>
+  </header>
+
+  <!-- ═══ EMAIL PANEL ═══ -->
+  <section id="panel-email" class="panel active">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Inbox</div>
+        <div class="panel-sub">Today's messages</div>
+      </div>
+      <button class="refresh-btn" onclick="loadEmails(true)">↺ Refresh</button>
+    </div>
+    <!-- analytics stats row -->
+    <div class="card" id="email-stats-card" style="display:none">
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num" id="estat-total">—</div>
+          <div class="stat-lbl">emails</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="estat-senders">—</div>
+          <div class="stat-lbl">senders</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="estat-latest">—</div>
+          <div class="stat-lbl">most recent</div>
+        </div>
+      </div>
+    </div>
+    <!-- top senders -->
+    <div class="card" id="email-senders-card" style="display:none">
+      <div class="card-title">TOP SENDERS</div>
+      <div id="email-senders-list"></div>
+    </div>
+    <!-- email list -->
+    <div class="card">
+      <div class="card-title">TODAY <span class="badge badge-blue" id="email-count" style="display:none"></span></div>
+      <div id="email-list"><div class="loading"><div class="spinner"></div>Loading emails…</div></div>
+    </div>
+  </section>
+
+  <!-- ═══ TASKS PANEL ═══ -->
+  <section id="panel-tasks" class="panel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Tasks</div>
+        <div class="panel-sub">Your to-do list</div>
+      </div>
+      <button class="refresh-btn" onclick="loadTasks()">↺ Refresh</button>
+    </div>
+
+    <!-- quick-add -->
+    <div class="card">
+      <div class="task-add-row">
+        <input id="task-input" class="task-input" placeholder='Add a task… (or say "add task: buy groceries")' />
+        <input id="task-due" class="task-due-input" type="text" placeholder="Due date (optional)" />
+        <button class="task-add-btn" onclick="addTaskFromUI()">+ Add</button>
+      </div>
+    </div>
+
+    <!-- stats -->
+    <div class="card" id="task-stats-card" style="display:none">
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num" id="tstat-pending">—</div><div class="stat-lbl">pending</div></div>
+        <div class="stat-box"><div class="stat-num" id="tstat-done">—</div><div class="stat-lbl">completed</div></div>
+        <div class="stat-box"><div class="stat-num" id="tstat-pct">—</div><div class="stat-lbl">done today</div></div>
+      </div>
+    </div>
+
+    <!-- pending list -->
+    <div class="card">
+      <div class="card-title">PENDING <span class="badge badge-blue" id="task-pending-count" style="display:none"></span></div>
+      <div id="task-pending-list"><div class="loading"><div class="spinner"></div>Loading tasks…</div></div>
+    </div>
+
+    <!-- completed list (hidden until there are some) -->
+    <div class="card" id="task-done-card" style="display:none">
+      <div class="card-title" style="cursor:pointer" onclick="toggleDoneList()">
+        COMPLETED <span id="task-done-chevron">▸</span>
+      </div>
+      <div id="task-done-list" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ═══ MEETINGS PANEL ═══ -->
+  <section id="panel-meetings" class="panel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Meetings</div>
+        <div class="panel-sub">Today's schedule</div>
+      </div>
+      <button class="refresh-btn" onclick="loadMeetings(true)">↺ Refresh</button>
+    </div>
+    <!-- analytics stats + day timeline -->
+    <div class="card" id="meetings-stats-card" style="display:none">
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num" id="mstat-count">—</div>
+          <div class="stat-lbl">meetings</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="mstat-time">—</div>
+          <div class="stat-lbl">time blocked</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="mstat-free">—</div>
+          <div class="stat-lbl">free today</div>
+        </div>
+        <div class="stat-box" id="mstat-next-box" style="display:none">
+          <div class="stat-num" id="mstat-next" style="color:var(--warn)">—</div>
+          <div class="stat-lbl">next meeting</div>
+        </div>
+      </div>
+      <div id="day-utilization"></div>
+    </div>
+    <!-- timeline -->
+    <div class="card">
+      <div class="card-title">TIMELINE</div>
+      <div id="meetings-list"><div class="loading"><div class="spinner"></div>Loading schedule…</div></div>
+    </div>
+  </section>
+
+  <!-- ═══ HEALTH PANEL ═══ -->
+  <section id="panel-health" class="panel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Health</div>
+        <div class="panel-sub">Activity &amp; wellness tracking</div>
+      </div>
+      <button class="refresh-btn" onclick="loadHealth(true)">↺ Refresh</button>
+    </div>
+    <div class="card">
+      <div class="card-title">TODAY</div>
+      <div id="health-rings" class="health-rings"><div class="loading"><div class="spinner"></div>Loading health data…</div></div>
+    </div>
+    <div class="card" id="analytics-card" style="display:none">
+      <div class="card-title">7-DAY AVERAGES</div>
+      <div id="analytics-grid" class="analytics-grid"></div>
+    </div>
+    <!-- 7-day sparkline bars -->
+    <div class="card" id="health-history-card" style="display:none">
+      <div class="card-title">7-DAY HISTORY</div>
+      <div id="health-history-bars"></div>
+    </div>
+    <div class="card" id="patterns-card" style="display:none">
+      <div class="card-title">PATTERNS (30 DAYS)</div>
+      <div id="patterns-list" class="patterns-list"></div>
+    </div>
+  </section>
+
+  <!-- ═══ NOTES PANEL ═══ -->
+  <section id="panel-notes" class="panel" style="padding:0;overflow:hidden">
+    <div class="notes-layout">
+      <aside class="notes-sidebar">
+        <div class="note-add-btn" id="new-note-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Note
+        </div>
+        <!-- notes analytics strip -->
+        <div id="notes-stats"></div>
+        <div id="notes-list"></div>
+      </aside>
+      <div class="note-editor" id="note-editor">
+        <div class="editor-toolbar">
+          <input class="editor-title" id="note-title" placeholder="Note title…" />
+          <div class="color-picker">
+            <div class="color-dot active" data-color="#fff9c4" style="background:#fff9c4" title="Yellow"></div>
+            <div class="color-dot" data-color="#e3f2fd" style="background:#e3f2fd" title="Blue"></div>
+            <div class="color-dot" data-color="#e8f5e9" style="background:#e8f5e9" title="Green"></div>
+            <div class="color-dot" data-color="#fce4ec" style="background:#fce4ec" title="Pink"></div>
+            <div class="color-dot" data-color="#fff3e0" style="background:#fff3e0" title="Orange"></div>
+            <div class="color-dot" data-color="#ffffff" style="background:#fff;border:1px solid #ddd" title="White"></div>
+          </div>
+          <button class="save-btn" id="save-note-btn">Save</button>
+        </div>
+        <textarea class="editor-body" id="note-content" placeholder="Start writing…"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HABITS PANEL ═══ -->
+  <section id="panel-habits" class="panel">
+    <div class="panel-header">
+      <div><div class="panel-title">Habits</div><div class="panel-sub">Daily streaks &amp; consistency</div></div>
+      <button class="refresh-btn" onclick="loadHabits()">↺ Refresh</button>
+    </div>
+    <div class="card" id="habits-stats-card" style="display:none">
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num" id="hstat-done">—</div><div class="stat-lbl">done today</div></div>
+        <div class="stat-box"><div class="stat-num" id="hstat-total">—</div><div class="stat-lbl">total habits</div></div>
+        <div class="stat-box"><div class="stat-num" id="hstat-best">—</div><div class="stat-lbl">best streak</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">TODAY</div>
+      <div id="habits-list"><div class="loading"><div class="spinner"></div>Loading habits…</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">30-DAY HISTORY</div>
+      <div id="habits-history"></div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px">ADD HABIT</div>
+      <div class="task-add-row">
+        <input id="habit-input" class="task-input" placeholder="New habit name…" />
+        <button class="task-add-btn" onclick="addHabitUI()">+ Add</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CALENDAR PANEL ═══ -->
+  <section id="panel-calendar" class="panel">
+    <div class="panel-header">
+      <div><div class="panel-title">Calendar</div><div class="panel-sub">Monthly view</div></div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="refresh-btn" onclick="calPrev()">‹ Prev</button>
+        <span id="cal-month-label" style="font-size:14px;font-weight:600;color:var(--text)"></span>
+        <button class="refresh-btn" onclick="calNext()">Next ›</button>
+      </div>
+    </div>
+    <div class="card">
+      <div id="cal-grid"></div>
+    </div>
+    <div class="card" id="cal-events-card" style="display:none">
+      <div class="card-title" id="cal-events-title">EVENTS</div>
+      <div id="cal-events-list"></div>
+    </div>
+  </section>
+
+  <!-- ═══ JOURNAL PANEL ═══ -->
+  <section id="panel-journal" class="panel" style="padding:0;overflow:hidden">
+    <div class="journal-layout">
+      <aside class="journal-sidebar">
+        <div class="journal-date-nav">
+          <button class="jnav-btn" id="jnav-prev" title="Previous day">‹</button>
+          <span id="journal-date-label" style="font-size:13px;font-weight:600;color:var(--text)"></span>
+          <button class="jnav-btn" id="jnav-next" title="Next day">›</button>
+        </div>
+        <div class="journal-search-wrap">
+          <input id="journal-search" class="task-input" placeholder="Search entries…" style="font-size:12px;padding:7px 10px" />
+        </div>
+        <div id="journal-recent"></div>
+      </aside>
+      <div class="journal-editor">
+        <div class="journal-toolbar">
+          <div class="mood-picker">
+            <span class="mood-label">Mood:</span>
+            <button class="mood-btn" data-mood="1" title="Bad">😔</button>
+            <button class="mood-btn" data-mood="2" title="Meh">😕</button>
+            <button class="mood-btn" data-mood="3" title="Okay">😐</button>
+            <button class="mood-btn" data-mood="4" title="Good">🙂</button>
+            <button class="mood-btn" data-mood="5" title="Great">😄</button>
+          </div>
+          <button class="save-btn" id="journal-save-btn">Save</button>
+        </div>
+        <textarea id="journal-content" class="editor-body" placeholder="Write about your day…"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINANCE PANEL ═══ -->
+  <section id="panel-finance" class="panel">
+    <div class="panel-header">
+      <div><div class="panel-title">Finance</div><div class="panel-sub">Income &amp; expenses</div></div>
+      <button class="refresh-btn" onclick="loadFinance()">↺ Refresh</button>
+    </div>
+    <div class="card" id="fin-summary-card" style="display:none">
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num trend-up" id="fstat-income">—</div><div class="stat-lbl">income</div></div>
+        <div class="stat-box"><div class="stat-num trend-down" id="fstat-expense">—</div><div class="stat-lbl">expenses</div></div>
+        <div class="stat-box"><div class="stat-num" id="fstat-balance">—</div><div class="stat-lbl">balance</div></div>
+      </div>
+    </div>
+    <div class="card" id="fin-cats-card" style="display:none">
+      <div class="card-title">BY CATEGORY</div>
+      <div id="fin-cats-list"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">ADD TRANSACTION</div>
+      <div class="fin-add-form">
+        <div class="fin-type-row">
+          <button class="fin-type-btn active" data-type="expense" onclick="setFinType('expense',this)">Expense</button>
+          <button class="fin-type-btn" data-type="income" onclick="setFinType('income',this)">Income</button>
+        </div>
+        <div class="fin-fields">
+          <input id="fin-amount" class="task-input" type="number" placeholder="Amount (₹)" style="width:130px" />
+          <select id="fin-category" class="task-input" style="width:160px;cursor:pointer"></select>
+          <input id="fin-desc" class="task-input" placeholder="Description (optional)" style="flex:1" />
+          <button class="task-add-btn" onclick="addFinanceUI()">+ Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">THIS MONTH <span id="fin-month-label" style="font-weight:400;color:var(--text-dim)"></span></div>
+      <div id="fin-list"><div class="loading"><div class="spinner"></div>Loading transactions…</div></div>
+    </div>
+  </section>
+
+  <!-- ═══ SYSTEM MONITOR PANEL ═══ -->
+  <section id="panel-sysmon" class="panel">
+    <div class="panel-header">
+      <div><div class="panel-title">System</div><div class="panel-sub">Live performance monitor</div></div>
+      <span id="sysmon-updated" style="font-size:11px;color:var(--text-dim)"></span>
+    </div>
+    <div class="card">
+      <div class="card-title">CPU</div>
+      <div class="sysbar-row">
+        <div class="sysbar-wrap"><div class="sysbar-fill" id="sysbar-cpu" style="background:#3b82f6"></div></div>
+        <span class="sysbar-pct" id="sysval-cpu">—</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">MEMORY</div>
+      <div class="sysbar-row">
+        <div class="sysbar-wrap"><div class="sysbar-fill" id="sysbar-ram" style="background:#8b5cf6"></div></div>
+        <span class="sysbar-pct" id="sysval-ram">—</span>
+      </div>
+      <div id="sysval-ram-detail" style="font-size:11.5px;color:var(--text-dim);margin-top:6px"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">DISK (C:)</div>
+      <div class="sysbar-row">
+        <div class="sysbar-wrap"><div class="sysbar-fill" id="sysbar-disk" style="background:#06b6d4"></div></div>
+        <span class="sysbar-pct" id="sysval-disk">—</span>
+      </div>
+      <div id="sysval-disk-detail" style="font-size:11.5px;color:var(--text-dim);margin-top:6px"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">NETWORK</div>
+      <div class="sys-net-row">
+        <div class="sys-net-box">
+          <div class="sys-net-icon" style="color:var(--success)">↓</div>
+          <div><div class="sys-net-val" id="sysval-recv">—</div><div class="sys-net-lbl">Received</div></div>
+        </div>
+        <div class="sys-net-box">
+          <div class="sys-net-icon" style="color:var(--accent)">↑</div>
+          <div><div class="sys-net-val" id="sysval-sent">—</div><div class="sys-net-lbl">Sent</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHITEBOARD PANEL ═══ -->
+  <section id="panel-whiteboard" class="panel" style="padding:0;overflow:hidden">
+    <div class="wb-outer-layout">
+
+      <!-- Sidebar -->
+      <aside class="wb-sidebar">
+        <div class="wb-new-board-btn" id="wb-new-board-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Board
+        </div>
+        <!-- whiteboard stats strip -->
+        <div id="wb-stats"></div>
+        <div id="wb-boards-list"></div>
+      </aside>
+
+      <!-- Main canvas area -->
+      <div class="wb-main">
+        <div class="wb-toolbar">
+          <span id="wb-board-name" style="font-size:13px;font-weight:600;color:var(--text);margin-right:8px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer" title="Double-click to rename">Untitled Board</span>
+          <div class="wb-sep"></div>
+          <button class="wb-btn active" data-tool="select" title="Select &amp; Move (V)">↖ Select</button>
+          <button class="wb-btn" data-tool="draw" title="Freehand Draw (D)">✏ Draw</button>
+          <button class="wb-btn" data-tool="text" title="Add Text (T)">T Text</button>
+          <button class="wb-btn" data-tool="sticky" title="Add Sticky Note (S)">📌 Sticky</button>
+          <button class="wb-btn" data-tool="eraser" title="Delete Selected (Del)">✕ Erase</button>
+          <div class="wb-sep"></div>
+          <span style="font-size:12px;color:var(--text-dim);margin-right:4px">Color:</span>
+          <div class="wb-color" data-color="#1a1a1a" style="background:#1a1a1a" title="Black"></div>
+          <div class="wb-color" data-color="#2563eb" style="background:#2563eb" title="Blue"></div>
+          <div class="wb-color" data-color="#22c55e" style="background:#22c55e" title="Green"></div>
+          <div class="wb-color" data-color="#ef4444" style="background:#ef4444" title="Red"></div>
+          <div class="wb-color" data-color="#f59e0b" style="background:#f59e0b" title="Amber"></div>
+          <div class="wb-color" data-color="#8b5cf6" style="background:#8b5cf6" title="Purple"></div>
+          <div class="wb-sep"></div>
+          <select id="wb-brush-size" style="background:var(--bg-3);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:4px 8px;font-size:12px;cursor:pointer">
+            <option value="2">Thin</option>
+            <option value="4" selected>Normal</option>
+            <option value="8">Thick</option>
+            <option value="16">Bold</option>
+          </select>
+          <div class="wb-sep"></div>
+          <button class="wb-btn" id="wb-undo" title="Undo (Ctrl+Z)">↩ Undo</button>
+          <button class="wb-btn" id="wb-clear" title="Clear canvas">Clear</button>
+          <div class="wb-spacer"></div>
+          <span id="wb-save-status" style="font-size:12px;color:var(--text-dim)"></span>
+          <button class="wb-btn" id="wb-save" title="Save (Ctrl+S)">💾 Save</button>
+        </div>
+        <div class="wb-canvas-wrap" id="wb-canvas-wrap">
+          <canvas id="wb-canvas"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- .world-layout -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"
+        onerror="document.getElementById('wb-canvas-wrap').innerHTML='<div class=\'empty-state\'>Whiteboard requires internet to load Fabric.js. Check connection and refresh.</div>'">
+</script>
+<script src="/static/js/world.js"></script>
+<script src="/static/js/habits.js"></script>
+<script src="/static/js/calendar_view.js"></script>
+<script src="/static/js/journal.js"></script>
+<script src="/static/js/finance.js"></script>
+<script src="/static/js/sysmon.js"></script>
+<script src="/static/js/whiteboard.js"></script>
+
+<script>
+  // ── Save-confirmation toast ───────────────────────────────
+  window.showToast = function (msg, type) {
+    const t = document.createElement('div');
+    t.textContent = msg;
+    Object.assign(t.style, {
+      position: 'fixed', bottom: '28px', right: '28px', zIndex: 9999,
+      padding: '10px 20px', borderRadius: '10px', fontSize: '13px', fontWeight: '600',
+      background: type === 'error' ? '#ef4444' : '#22c55e', color: '#fff',
+      boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
+      transition: 'opacity 0.4s', opacity: '1',
+    });
+    document.body.appendChild(t);
+    setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }, 2200);
+  };
+
+  // ── Atlas SSE — voice-worker commands + live refresh ─────
+  (function () {
+    function isActive(tab) {
+      const el = document.getElementById('panel-' + tab);
+      return el && el.classList.contains('active');
+    }
+
+    function connect() {
+      const es = new EventSource('/api/events');
+
+      es.onmessage = function (e) {
+        try {
+          const msg = JSON.parse(e.data);
+          const cmd = msg.cmd;
+          if (!cmd || cmd === 'ping') return;
+
+          if (cmd === 'close') {
+            es.close();
+            window.close();
+            setTimeout(function () { if (!window.closed) showDismissed(); }, 150);
+            return;
+          }
+
+          // Live data refresh
+          if (cmd === 'refresh:tasks') {
+            window._loaded && (_loaded['tasks'] = false);
+            if (isActive('tasks') && typeof loadTasks === 'function') loadTasks();
+          }
+          if (cmd === 'refresh:meetings') {
+            window._loaded && (_loaded['meetings'] = false);
+            if (isActive('meetings') && typeof loadMeetings === 'function') loadMeetings();
+          }
+          if (cmd === 'refresh:health') {
+            window._loaded && (_loaded['health'] = false);
+            if (isActive('health') && typeof loadHealth === 'function') loadHealth();
+          }
+          if (cmd === 'refresh:habits') {
+            if (isActive('habits') && typeof loadHabits === 'function') loadHabits();
+          }
+        } catch (_) {}
+      };
+
+      es.onerror = function () {
+        es.close();
+        setTimeout(connect, 5000);   // reconnect on drop
+      };
+    }
+
+    connect();
+
+    function showDismissed() {
+      document.body.innerHTML = [
+        '<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;',
+        'justify-content:center;gap:18px;background:#0d1117;',
+        'font-family:Inter,-apple-system,sans-serif;color:#8b949e;text-align:center;padding:24px">',
+        '<div style="font-size:52px">💤</div>',
+        '<div style="font-size:22px;font-weight:700;color:#e6edf3">Dashboard dismissed</div>',
+        '<div style="font-size:14px;line-height:1.6">',
+        'Say <span style="color:#3b82f6;font-weight:600">"open my dashboard"</span>',
+        ' to Atlas to bring it back.</div>',
+        '<a href="/world" style="margin-top:8px;padding:11px 28px;background:#3b82f6;',
+        'color:#fff;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600">',
+        '← Reopen Dashboard</a>',
+        '</div>',
+      ].join('');
+    }
+  })();
+</script>
+</body>
+</html>

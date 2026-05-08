@@ -1,0 +1,27 @@
+# GUI
+PyQt6==6.4.2
+opencv-python-headless==4.8.1.78
+Pillow==10.0.1
+
+# Wake word + Speech
+openwakeword==0.5.1
+SpeechRecognition
+PyAudio==0.2.14
+
+# Brain / LLM
+groq
+python-dotenv==1.0.0
+
+# Google APIs (Calendar + Drive + Gmail OAuth)
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+
+# Dashboard
+flask
+
+# Productivity / System
+pynput
+psutil
+dateparser
+requests
