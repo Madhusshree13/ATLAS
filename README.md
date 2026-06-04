@@ -306,6 +306,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 <div align="center">
 
-Built with ❤️ by [Madhusshree](https://github.com/Madhusshree13)
+Built  by [Madhusshree](https://github.com/Madhusshree13)
 
 </div>
