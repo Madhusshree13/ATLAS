@@ -1,3 +1,12 @@
+## ✨ What is Atlas?
+
+Atlas is a fully local, privacy-first voice assistant that lives on your desktop as an animated avatar. Say the wake word, give a command, and Atlas handles everything — searching Spotify, reading your emails, scheduling meetings, logging your health, managing tasks, and much more.
+
+Unlike cloud assistants, Atlas processes your commands through Groq's ultra-fast inference API and keeps your personal data on your own machine.
+
+---
+
+
 <div align="center">
 
 # 🌐 ATLAS
